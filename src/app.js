@@ -7,7 +7,7 @@ const path = require('path')
 const app = express()
 const authRoutes = require('./routes/auth.routes')
 const incomeRoutes = require('./routes/income.routes');
-const outcomeRoutes = require('.routes/outcome.routes');
+const outcomeRoutes = require('./routes/outcome.routes');
 
 //decimoquinto hacer require del dotenv
 require('dotenv').config()

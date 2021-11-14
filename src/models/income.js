@@ -13,7 +13,7 @@ const Income = new Schema({
     },
     createdAt: {
         type: Date,
-        default: DateNow
+        default: Date.now
     }
 })
 
@@ -24,6 +24,6 @@ Income.pre('save', function(next){
     next()
 })
 
-modules.exports = mongoose.model('incomes', Income)
+module.exports = mongoose.model('incomes', Income)
 
 

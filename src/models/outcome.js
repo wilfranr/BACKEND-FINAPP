@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
-const Outcome = new Shema({
+const Outcome = new Schema({
     user: {
-        type: mongoose.Shema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
     value: Number,
