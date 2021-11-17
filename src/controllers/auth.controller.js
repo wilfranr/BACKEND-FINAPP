@@ -14,7 +14,7 @@ const authController= {
             res.status(token.code).json({"token":token})
         } catch (error) {
             // res.send(error)
-            res.status(500).json({'error':error})
+            res.status(500).json({"error":error})
         }
     },
     register: async function (req, res){
