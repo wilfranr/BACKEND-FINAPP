@@ -3,14 +3,13 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const path = require('path')
+//decimoquinto hacer require del dotenv
+require('dotenv').config()
 //segundo: instanciar express
 const app = express()
 const authRoutes = require('./routes/auth.routes')
 const incomeRoutes = require('./routes/income.routes');
 const outcomeRoutes = require('./routes/outcome.routes');
-
-//decimoquinto hacer require del dotenv
-require('dotenv').config()
 
 
 //tercero: configurar puerto
