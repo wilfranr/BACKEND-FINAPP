@@ -3,7 +3,6 @@ const router = express.Router()
 const authController = require('../controllers/auth.controller');
 const { check } = require('express-validator');
 
-
 /**
  * @api {get} /profile Perfil del usuario
  * @apiName Perfil 
@@ -84,11 +83,11 @@ router.get('/profile', authController.profile)
  *   }
  */
 router.post('/register', [
-    check('name', 'nombre no valido, minimo 2 carácteres, máximo 40 caráteres' ).isLength({min:2, max:40}),
+    check('name', 'nombre no valido, minimo 2 carácteres, máximo 40 caráteres').isLength({ min: 2, max: 40 }),
     check('email', 'Email no valido').isEmail(),
     check('password', 'Contraseña debil').isStrongPassword()
 ],
-authController.register)
+    authController.register)
 
 
 /**
