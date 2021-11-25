@@ -13,7 +13,10 @@ const incomeController = {
     },
     list: async function (req, res) {
         try {
-            const list = await Income.find()
+            //const income = new Income(req.body)
+            //res.send(income)
+            // res.send(req.user)
+            const list = await Income.find({user:req.body.user})
             res.status(200).json({'income':list})
         } catch (error) {
             res.status(500).json({'error':error})
